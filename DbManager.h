@@ -57,3 +57,4 @@ public:
 };
 
 #endif // DBMANAGER_H
+
