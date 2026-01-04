@@ -67,8 +67,6 @@ void BorrowWidget::refreshList() {
 }
 
 void BorrowWidget::filterOverdue() {
-    // 假设借期为30天，这里演示简单的 SQL 筛选
-    // 注意：SQLite 日期比较依赖格式，这里假设存的是 yyyy-MM-dd
     QString today = QDate::currentDate().toString("yyyy-MM-dd");
     QString sql = QString("SELECT br.id, r.name, b.title, br.borrow_date "
                           "FROM borrow_records br "
@@ -181,3 +179,4 @@ void BorrowWidget::returnBook() {
         QSqlDatabase::database().rollback();
     }
 }
+
